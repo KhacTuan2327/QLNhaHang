@@ -137,11 +137,11 @@
     <Compile Include="Food\SelectedFood.Designer.cs">
       <DependentUpon>SelectedFood.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Help\Help.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Help\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
     </Compile>
     <Compile Include="Introduce\Introduce.cs">
       <SubType>UserControl</SubType>
@@ -332,9 +332,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Food\Foods.resx">
       <DependentUpon>Foods.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Introduce\Introduce.resx">
       <DependentUpon>Introduce.cs</DependentUpon>
