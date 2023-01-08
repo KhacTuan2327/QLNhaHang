@@ -36,11 +36,30 @@
     <Reference Include="Guna.UI2, Version=2.0.3.9, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.9\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,11 +71,83 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Data_Provider.cs" />
+    <Compile Include="Food\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Food\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food\AddFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Food\AddFood.Designer.cs">
+      <DependentUpon>AddFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food\Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Food\Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food\DataSetFood.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFood.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Food\FoodMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Food\FoodMenu.Designer.cs">
+      <DependentUpon>FoodMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food\Foods.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Food\Foods.Designer.cs">
+      <DependentUpon>Foods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food\InforDesk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Food\InforDesk.Designer.cs">
+      <DependentUpon>InforDesk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food\InHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Food\InHoaDon.Designer.cs">
+      <DependentUpon>InHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food\SelectedFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Food\SelectedFood.Designer.cs">
+      <DependentUpon>SelectedFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Introduce\Introduce.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Introduce\Introduce.Designer.cs">
+      <DependentUpon>Introduce.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -64,13 +155,201 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPass.Designer.cs">
+      <DependentUpon>NewPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyNhaHangDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhaHangDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhaHangDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhaHangDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhaHangDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhaHangDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Staff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistical\BDNgayTuan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistical\BDNgayTuan.Designer.cs">
+      <DependentUpon>BDNgayTuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistical\BDThangNam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistical\BDThangNam.Designer.cs">
+      <DependentUpon>BDThangNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistical\Statistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistical\Statistical.Designer.cs">
+      <DependentUpon>Statistical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistical\Statisticals.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistical\Statisticals.Designer.cs">
+      <DependentUpon>Statisticals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistical\ThongKeLuaChon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistical\ThongKeLuaChon.Designer.cs">
+      <DependentUpon>ThongKeLuaChon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistical\ThongKeTheoNam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistical\ThongKeTheoNam.Designer.cs">
+      <DependentUpon>ThongKeTheoNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistical\ThongKeTheoNgay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistical\ThongKeTheoNgay.Designer.cs">
+      <DependentUpon>ThongKeTheoNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistical\ThongKeTheoThang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistical\ThongKeTheoThang.Designer.cs">
+      <DependentUpon>ThongKeTheoThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\ChiTietNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\ChiTietNhap.Designer.cs">
+      <DependentUpon>ChiTietNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\ChiTietXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\ChiTietXuat.Designer.cs">
+      <DependentUpon>ChiTietXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\DataSetNhap.cs">
+      <DependentUpon>DataSetNhap.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\DataSetNhap.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetNhap.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\DataSetXuat.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetXuat.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\FormPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\FormPhieuNhap.Designer.cs">
+      <DependentUpon>FormPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\FormPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\FormPhieuXuat.Designer.cs">
+      <DependentUpon>FormPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\InPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\InPhieuNhap.Designer.cs">
+      <DependentUpon>InPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\InPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\InPhieuXuat.Designer.cs">
+      <DependentUpon>InPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\NguyenLieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Warehouse\NguyenLieu.Designer.cs">
+      <DependentUpon>NguyenLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\NguyenLieuMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\NguyenLieuMoi.Designer.cs">
+      <DependentUpon>NguyenLieuMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\ThemPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\ThemPhieuNhap.Designer.cs">
+      <DependentUpon>ThemPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse\ThemPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse\ThemPhieuXuat.Designer.cs">
+      <DependentUpon>ThemPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Food\AddFood.resx">
+      <DependentUpon>AddFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Food\FoodMenu.resx">
+      <DependentUpon>FoodMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Food\Foods.resx">
+      <DependentUpon>Foods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Introduce\Introduce.resx">
+      <DependentUpon>Introduce.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPass.resx">
+      <DependentUpon>NewPass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,6 +361,60 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistical\BDNgayTuan.resx">
+      <DependentUpon>BDNgayTuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistical\BDThangNam.resx">
+      <DependentUpon>BDThangNam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistical\Statisticals.resx">
+      <DependentUpon>Statisticals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\ChiTietNhap.resx">
+      <DependentUpon>ChiTietNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\ChiTietXuat.resx">
+      <DependentUpon>ChiTietXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\FormPhieuNhap.resx">
+      <DependentUpon>FormPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\FormPhieuXuat.resx">
+      <DependentUpon>FormPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\InPhieuNhap.resx">
+      <DependentUpon>InPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\InPhieuXuat.resx">
+      <DependentUpon>InPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\NguyenLieu.resx">
+      <DependentUpon>NguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\NguyenLieuMoi.resx">
+      <DependentUpon>NguyenLieuMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\ThemPhieuNhap.resx">
+      <DependentUpon>ThemPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse\ThemPhieuXuat.resx">
+      <DependentUpon>ThemPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Food\DataSetFood.xsc">
+      <DependentUpon>DataSetFood.xsd</DependentUpon>
+    </None>
+    <None Include="Food\DataSetFood.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFood.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Food\DataSetFood.xss">
+      <DependentUpon>DataSetFood.xsd</DependentUpon>
+    </None>
+    <None Include="Food\InHoaDon.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,96 +425,151 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QuanLyNhaHangDataSet.xsc">
+      <DependentUpon>QuanLyNhaHangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhaHangDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyNhaHangDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyNhaHangDataSet.xss">
+      <DependentUpon>QuanLyNhaHangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhaHangDataSet1.xsc">
+      <DependentUpon>QuanLyNhaHangDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhaHangDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyNhaHangDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyNhaHangDataSet1.xss">
+      <DependentUpon>QuanLyNhaHangDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhaHangDataSet21.xsc">
+      <DependentUpon>QuanLyNhaHangDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhaHangDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyNhaHangDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyNhaHangDataSet21.xss">
+      <DependentUpon>QuanLyNhaHangDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Warehouse\DataSetNhap.xsc">
+      <DependentUpon>DataSetNhap.xsd</DependentUpon>
+    </None>
+    <None Include="Warehouse\DataSetNhap.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetNhap.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Warehouse\DataSetNhap.xss">
+      <DependentUpon>DataSetNhap.xsd</DependentUpon>
+    </None>
+    <None Include="Warehouse\DataSetXuat.xsc">
+      <DependentUpon>DataSetXuat.xsd</DependentUpon>
+    </None>
+    <None Include="Warehouse\DataSetXuat.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetXuat.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Warehouse\DataSetXuat.xss">
+      <DependentUpon>DataSetXuat.xsd</DependentUpon>
+    </None>
+    <None Include="Warehouse\PhieuNhap.rdlc" />
+    <None Include="Warehouse\PhieuXuat.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\addcustomer.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add-to-basket.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bookFood1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\booking.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\browser.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\customer.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Foodmain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\food-tray.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hot-sale.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\house.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\letter.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\login.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loginPizza.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\manager.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menufood.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\password.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pizza.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\presentation.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\register.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\salePizza.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Food\food\2732655.png" />
+    <Content Include="Food\food\5309792.png" />
+    <Content Include="Food\food\banh-pizza-chay-600x375.jpg" />
+    <Content Include="Food\food\beef-burger.jpg" />
+    <Content Include="Food\food\burger-ca-hoi.jpg" />
+    <Content Include="Food\food\burger-ga.jpg" />
+    <Content Include="Food\food\cam.jpg" />
+    <Content Include="Food\food\check.png" />
+    <Content Include="Food\food\cheden.jpg" />
+    <Content Include="Food\food\dasani.jpg" />
+    <Content Include="Food\food\menufood.png" />
+    <Content Include="Food\food\pepsi.jpg" />
+    <Content Include="Food\food\pizza tom.jpg" />
+    <Content Include="Food\food\pizza-bo-bam.jpg" />
+    <Content Include="Food\food\Pizza-phô-mai.jpg" />
+    <Content Include="Food\food\pizza-xuc-xich-1.jpg" />
+    <Content Include="Food\food\pngtree-white-restaurant-table-image_2234080-removebg-preview.png" />
+    <Content Include="Food\food\tra-dao-cam-sa.jpg" />
+    <Content Include="Food\food\tra-sua-truyen-thong.jpg" />
+    <Content Include="Food\food\tải xuống.png" />
+    <Content Include="Food\food\update.png" />
+    <Content Include="Resources\1.jpg" />
+    <Content Include="Resources\1200px-View-refresh_Gion_simple.svg-removebg-preview.png" />
+    <Content Include="Resources\2.jpg" />
+    <Content Include="Resources\3.jpg" />
+    <Content Include="Resources\4.jpg" />
+    <Content Include="Resources\5.jpg" />
+    <Content Include="Resources\6.jpg" />
+    <Content Include="Resources\add-to-basket.png" />
+    <Content Include="Resources\addcustomer.png" />
+    <Content Include="Resources\background-statistical.jpg" />
+    <Content Include="Resources\best-price.png" />
+    <Content Include="Resources\billcus.png" />
+    <Content Include="Resources\bookFood1.png" />
+    <Content Include="Resources\booking.png" />
+    <Content Include="Resources\browser.png" />
+    <Content Include="Resources\check.png" />
+    <Content Include="Resources\cus.png" />
+    <Content Include="Resources\customer.png" />
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\deleteNamFood.png" />
+    <Content Include="Resources\fix.png" />
+    <Content Include="Resources\food-tray.png" />
+    <Content Include="Resources\Foodmain.png" />
+    <Content Include="Resources\hot-sale.png" />
+    <Content Include="Resources\house.png" />
+    <Content Include="Resources\icons8-sort-left-100.png" />
+    <Content Include="Resources\icons8-sort-right-100.png" />
+    <Content Include="Resources\inforDesk.png" />
+    <Content Include="Resources\kisspng-logo-brand-font-eye-icon-png-eye-icon-5ab0477579d225.383893121521502069499-removebg-preview.png" />
+    <Content Include="Resources\letter.png" />
+    <Content Include="Resources\login.jpg" />
+    <Content Include="Resources\loginPizza.jpg" />
+    <Content Include="Resources\loginPizza1.jpg" />
+    <Content Include="Resources\logo.png" />
+    <Content Include="Resources\manager.gif" />
+    <Content Include="Resources\menufood.png" />
+    <Content Include="Resources\nameFood.png" />
+    <Content Include="Resources\password.png" />
+    <Content Include="Resources\pixlr-bg-result.png" />
+    <Content Include="Resources\pizza.png" />
+    <Content Include="Resources\plus.png" />
+    <Content Include="Resources\png-clipart-computer-icons-statistics-bar-chart-histogram-statistics-miscellaneous-angle-thumbnail.png" />
+    <Content Include="Resources\pngtree-statistics-vector-icon-png-image_3758948.jpg" />
+    <Content Include="Resources\presentation.png" />
+    <Content Include="Resources\QR.png" />
+    <Content Include="Resources\refresh.png" />
+    <Content Include="Resources\register.jpg" />
+    <Content Include="Resources\saleBlack.png" />
+    <Content Include="Resources\salePizza.png" />
     <None Include="Resources\salePizza1.png" />
+    <Content Include="Resources\search.png" />
+    <Content Include="Resources\see.png" />
+    <Content Include="Resources\staff.png" />
+    <Content Include="Resources\staff1.png" />
+    <Content Include="Resources\user.png" />
+    <Content Include="Resources\warehouse.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll" />
+    <Content Include="SqlServerTypes\x86\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\search.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\staff.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\staff1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\warehouse.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

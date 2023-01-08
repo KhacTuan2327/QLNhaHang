@@ -43,8 +43,6 @@ namespace QLNhaHang
             this.guna2ControlBoxClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.barMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.sidePanel = new System.Windows.Forms.Panel();
             this.guna2GradientTileBtnHome = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -54,20 +52,30 @@ namespace QLNhaHang
             this.guna2GradientTileBtnCustomer = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientTileWarehouse = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientTileBtnStaff = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.MainPage = new QLNhaHang.MainPage();
+            this.statisticals1 = new QLNhaHang.Statistical.Statisticals();
+            this.mainPage1 = new QLNhaHang.MainPage();
+            this.nguyenLieu1 = new QLNhaHang.Warehouse.NguyenLieu();
+            this.statisticals2 = new QLNhaHang.Statistical.Statisticals();
+            this.introduce1 = new QLNhaHang.Introduce.Introduce();
+            this.staff1 = new QLNhaHang.Staff();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.customer1 = new QLNhaHang.Customer();
+            this.foods1 = new QLNhaHang.Food.Foods();
             this.pnl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanelInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.barMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl1
             // 
             this.pnl1.BackColor = System.Drawing.Color.Gold;
             this.pnl1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnl1.Controls.Add(this.label2);
             this.pnl1.Controls.Add(this.btnSignOut);
             this.pnl1.Controls.Add(this.guna2PictureBox1);
             this.pnl1.Controls.Add(this.guna2GradientPanelInfo);
@@ -81,7 +89,9 @@ namespace QLNhaHang
             this.pnl1.Location = new System.Drawing.Point(0, 0);
             this.pnl1.Name = "pnl1";
             this.pnl1.Size = new System.Drawing.Size(1500, 95);
-            this.pnl1.TabIndex = 1;
+            this.pnl1.TabIndex = 0;
+            this.pnl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl1_MouseDown);
+            this.pnl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl1_MouseMove);
             // 
             // btnSignOut
             // 
@@ -100,6 +110,7 @@ namespace QLNhaHang
             this.btnSignOut.Size = new System.Drawing.Size(147, 36);
             this.btnSignOut.TabIndex = 6;
             this.btnSignOut.Text = "Sign out";
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // guna2PictureBox1
             // 
@@ -194,6 +205,7 @@ namespace QLNhaHang
             this.guna2TextBoxSearch.SelectedText = "";
             this.guna2TextBoxSearch.Size = new System.Drawing.Size(420, 36);
             this.guna2TextBoxSearch.TabIndex = 7;
+            this.guna2TextBoxSearch.Click += new System.EventHandler(this.guna2TextBoxSearch_Click);
             // 
             // guna2ControlBoxMinScreen
             // 
@@ -231,39 +243,28 @@ namespace QLNhaHang
             this.guna2ControlBoxClose.Name = "guna2ControlBoxClose";
             this.guna2ControlBoxClose.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBoxClose.TabIndex = 4;
+            this.guna2ControlBoxClose.Click += new System.EventHandler(this.guna2ControlBoxClose_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(95, 17);
+            this.label1.Location = new System.Drawing.Point(94, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 26);
+            this.label1.Size = new System.Drawing.Size(121, 26);
             this.label1.TabIndex = 1;
-            this.label1.Text = "MTA";
+            this.label1.Text = "HTQB Huts";
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::QLNhaHang.Properties.Resources.pizza;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::QLNhaHang.Properties.Resources.pizza;
             this.pictureBox1.Location = new System.Drawing.Point(3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(86, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label2.Location = new System.Drawing.Point(92, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 26);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Pizza";
             // 
             // barMenu
             // 
@@ -280,7 +281,7 @@ namespace QLNhaHang
             this.barMenu.Location = new System.Drawing.Point(0, 95);
             this.barMenu.Name = "barMenu";
             this.barMenu.Size = new System.Drawing.Size(183, 605);
-            this.barMenu.TabIndex = 3;
+            this.barMenu.TabIndex = 2;
             // 
             // sidePanel
             // 
@@ -314,6 +315,7 @@ namespace QLNhaHang
             this.guna2GradientTileBtnHome.TabIndex = 9;
             this.guna2GradientTileBtnHome.Text = "Home";
             this.guna2GradientTileBtnHome.TextFormatNoPrefix = true;
+            this.guna2GradientTileBtnHome.Click += new System.EventHandler(this.guna2GradientTileBtnHome_Click);
             // 
             // guna2GradientTileBtnFood
             // 
@@ -338,6 +340,7 @@ namespace QLNhaHang
             this.guna2GradientTileBtnFood.TabIndex = 8;
             this.guna2GradientTileBtnFood.Text = "Food";
             this.guna2GradientTileBtnFood.TextFormatNoPrefix = true;
+            this.guna2GradientTileBtnFood.Click += new System.EventHandler(this.guna2GradientTileBtnFood_Click);
             // 
             // guna2GradientTileBtnStatistical
             // 
@@ -362,6 +365,7 @@ namespace QLNhaHang
             this.guna2GradientTileBtnStatistical.TabIndex = 7;
             this.guna2GradientTileBtnStatistical.Text = "Statistical";
             this.guna2GradientTileBtnStatistical.TextFormatNoPrefix = true;
+            this.guna2GradientTileBtnStatistical.Click += new System.EventHandler(this.guna2GradientTileBtnStatistical_Click);
             // 
             // guna2GradientTileBtnIntroduce
             // 
@@ -386,6 +390,7 @@ namespace QLNhaHang
             this.guna2GradientTileBtnIntroduce.TabIndex = 6;
             this.guna2GradientTileBtnIntroduce.Text = "Introduce";
             this.guna2GradientTileBtnIntroduce.TextFormatNoPrefix = true;
+            this.guna2GradientTileBtnIntroduce.Click += new System.EventHandler(this.guna2GradientTileBtnIntroduce_Click);
             // 
             // guna2GradientTileBtnCustomer
             // 
@@ -410,6 +415,7 @@ namespace QLNhaHang
             this.guna2GradientTileBtnCustomer.TabIndex = 5;
             this.guna2GradientTileBtnCustomer.Text = "Customer";
             this.guna2GradientTileBtnCustomer.TextFormatNoPrefix = true;
+            this.guna2GradientTileBtnCustomer.Click += new System.EventHandler(this.guna2GradientTileBtnCustomer_Click);
             // 
             // guna2GradientTileWarehouse
             // 
@@ -434,6 +440,7 @@ namespace QLNhaHang
             this.guna2GradientTileWarehouse.TabIndex = 4;
             this.guna2GradientTileWarehouse.Text = "Warehouse";
             this.guna2GradientTileWarehouse.TextFormatNoPrefix = true;
+            this.guna2GradientTileWarehouse.Click += new System.EventHandler(this.guna2GradientTileWarehouse_Click);
             // 
             // guna2GradientTileBtnStaff
             // 
@@ -458,15 +465,98 @@ namespace QLNhaHang
             this.guna2GradientTileBtnStaff.TabIndex = 3;
             this.guna2GradientTileBtnStaff.Text = "Staff";
             this.guna2GradientTileBtnStaff.TextFormatNoPrefix = true;
+            this.guna2GradientTileBtnStaff.Click += new System.EventHandler(this.guna2GradientTileBtnStaff_Click);
+            // 
+            // MainPage
+            // 
+            this.MainPage.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainPage.Location = new System.Drawing.Point(0, 0);
+            this.MainPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MainPage.Name = "MainPage";
+            this.MainPage.Size = new System.Drawing.Size(1147, 600);
+            this.MainPage.TabIndex = 0;
+            // 
+            // statisticals1
+            // 
+            this.statisticals1.BackColor = System.Drawing.Color.White;
+            this.statisticals1.Location = new System.Drawing.Point(0, -2);
+            this.statisticals1.Name = "statisticals1";
+            this.statisticals1.Size = new System.Drawing.Size(1293, 595);
+            this.statisticals1.TabIndex = 4;
+            // 
+            // mainPage1
+            // 
+            this.mainPage1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.mainPage1.Location = new System.Drawing.Point(0, 2);
+            this.mainPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mainPage1.Name = "mainPage1";
+            this.mainPage1.Size = new System.Drawing.Size(1290, 596);
+            this.mainPage1.TabIndex = 1;
+            // 
+            // nguyenLieu1
+            // 
+            this.nguyenLieu1.Location = new System.Drawing.Point(3, 6);
+            this.nguyenLieu1.Name = "nguyenLieu1";
+            this.nguyenLieu1.Size = new System.Drawing.Size(1299, 598);
+            this.nguyenLieu1.TabIndex = 3;
+            // 
+            // statisticals2
+            // 
+            this.statisticals2.BackColor = System.Drawing.Color.White;
+            this.statisticals2.Location = new System.Drawing.Point(0, 2);
+            this.statisticals2.Name = "statisticals2";
+            this.statisticals2.Size = new System.Drawing.Size(1293, 595);
+            this.statisticals2.TabIndex = 4;
+            // 
+            // introduce1
+            // 
+            this.introduce1.Location = new System.Drawing.Point(3, 3);
+            this.introduce1.Name = "introduce1";
+            this.introduce1.Size = new System.Drawing.Size(1290, 595);
+            this.introduce1.TabIndex = 5;
+            // 
+            // staff1
+            // 
+            this.staff1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.staff1.Location = new System.Drawing.Point(3, 3);
+            this.staff1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.staff1.Name = "staff1";
+            this.staff1.Size = new System.Drawing.Size(1302, 599);
+            this.staff1.TabIndex = 6;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Location = new System.Drawing.Point(189, 100);
+            this.panel1.Controls.Add(this.foods1);
+            this.panel1.Controls.Add(this.customer1);
+            this.panel1.Controls.Add(this.staff1);
+            this.panel1.Controls.Add(this.introduce1);
+            this.panel1.Controls.Add(this.statisticals2);
+            this.panel1.Controls.Add(this.nguyenLieu1);
+            this.panel1.Controls.Add(this.mainPage1);
+            this.panel1.Location = new System.Drawing.Point(189, 95);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1299, 598);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 3;
+            // 
+            // customer1
+            // 
+            this.customer1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.customer1.Location = new System.Drawing.Point(0, 3);
+            this.customer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customer1.Name = "customer1";
+            this.customer1.Size = new System.Drawing.Size(1302, 593);
+            this.customer1.TabIndex = 7;
+            // 
+            // foods1
+            // 
+            this.foods1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.foods1.Location = new System.Drawing.Point(3, 2);
+            this.foods1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.foods1.Name = "foods1";
+            this.foods1.Size = new System.Drawing.Size(2726, 1234);
+            this.foods1.TabIndex = 8;
             // 
             // MainForm
             // 
@@ -483,6 +573,7 @@ namespace QLNhaHang
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnl1.ResumeLayout(false);
             this.pnl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -491,6 +582,7 @@ namespace QLNhaHang
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.barMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -498,30 +590,38 @@ namespace QLNhaHang
         #endregion
 
         private System.Windows.Forms.Panel pnl1;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button btnSignOut;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanelInfo;
-        private System.Windows.Forms.Label lbPosition;
-        private System.Windows.Forms.Label lbName;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxSearch;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxMinScreen;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxMaxScreen;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolTip toolTip1;
         private Guna.UI2.WinForms.Guna2Panel barMenu;
-        private System.Windows.Forms.Panel sidePanel;
+        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileBtnStaff;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileBtnHome;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileBtnFood;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileBtnStatistical;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileBtnIntroduce;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileBtnCustomer;
         private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileWarehouse;
-        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileBtnStaff;
-        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxMinScreen;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxMaxScreen;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBoxClose;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBoxSearch;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanelInfo;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Label lbPosition;
+        private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private MainPage MainPage;
+        private System.Windows.Forms.Panel sidePanel;
+        private Statistical.Statisticals statisticals1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private MainPage mainPage1;
+        private Warehouse.NguyenLieu nguyenLieu1;
+        private Statistical.Statisticals statisticals2;
+        private Introduce.Introduce introduce1;
+        private Staff staff1;
+        private System.Windows.Forms.Panel panel1;
+        private Food.Foods foods1;
+        private Customer customer1;
+        //private Food.Foods foods1;
     }
 }
